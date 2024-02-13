@@ -1,0 +1,25 @@
+style.
+  body {
+    text-align: center;
+    font-family: sans-serif;
+  }
+ml
+  head
+    title Тестовое приложение на Node.js
+  body
+    img(src='/images/hosterlogo.png')
+    h2 Тестовое приложение hoster.by
+    p
+      |Работает на Node.js 
+      a(style={color: 'green'}) #{version}
+    p
+      |Подключение к MySQL 
+      if mysql_state!='установлено'
+        a(style={color: 'red'}) #{mysql_state}
+      else
+        a(style={color: 'green'}) #{mysql_state}
+        p
+          |База данных 
+          strong #{mysql_database}
+          |, пользователь 
+          strong #{mysql_user}
